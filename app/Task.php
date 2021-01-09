@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
+    public function folder()
+    {
+        return $this->belongsTo('App\Folder');
+    }
     /**
      * 状態定義
      */
