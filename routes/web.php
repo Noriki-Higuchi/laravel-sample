@@ -11,6 +11,13 @@
 |
 */
 
+//タスク一覧ページ
 Route::get('/folders/{id}/tasks', 'TaskController@index')->name('tasks.index');
+//フォルダ作成ページ
 Route::get('/folders/create', 'FolderController@showCreateForm')->name('folders.create');
+//フォルダ作成処理
 Route::post('/folders/create', 'FolderController@create');
+//タスク作成ページ
+Route::get('/folders/{id}/tasks/create', 'TaskController@showCreateForm')->name('tasks.create');
+//タスク作成処理
+Route::post('/folders/{id}/tasks/create', 'TaskController@create');
