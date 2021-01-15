@@ -10,7 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//ホームページ
+Route::get('/', 'HomeController@index')->name('home');
+//認証
+Auth::routes();
 //タスク一覧ページ
 Route::get('/folders/{id}/tasks', 'TaskController@index')->name('tasks.index');
 //フォルダ作成ページ
